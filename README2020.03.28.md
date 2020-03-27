@@ -25,8 +25,24 @@
 1. 正面（左——右）**微USB 带继电器的电子开关 主晶振 主单片机 ASP状态指示灯，模式按钮 独立LED（pb0,pb1控制） 独立按键**
 2. 背面（左--右）**ft串口芯片（isp下载或者转化usb）,3.3v稳压芯片，asp控制芯片，rtc晶振，rtc备用电池，无源蜂鸣器
 3. 电源输入：3v,各个引脚彼此对应
+
 # <a id='4'>学习内容4</a>
-## 电灯仪式
+## 点灯仪式（在模块化进行代码修改）右键跳转到代码模块区
+* led端口初始化(LED_Init()；初始化外设GPIOx寄存器)
+```
+#include "led.h"
+LED_Init()； //led灯的接口初始化//（）
+GPIO_Pin_0;//选择端口0~15或all//
+GPIO_Mode_out_pp;//选择io口的工作方式//
+GPIO_Speed_59mhz;//io口接口速度//
+```
+* led接口输出电平
+1. GPIO_WrinteBit：设置或清除指定的数据端口位）
+```
+GPIO_WrinteBit(LEDPORT,LED1,(BITACTION)(1/0))//高电平1
+```
+2. GPIO_ResetBits(全为高电平)
+3. GPIO_SetBits(全为低电平)
 
-
-
+# <a id='5'>学习内容5</a>
+## 固件库的安装
