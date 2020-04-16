@@ -166,3 +166,53 @@ for(j=1;j<=10;j++)
   return 0;
 }
 ```
+* 函数的递归调用（计算年龄）
+* 递归出口：age(n)=10,(n=1);递推方式：age(n)=age(n-1)+2,(n>1)
+```
+#include<stdio.h>
+int main()
+{
+	int age(int n);
+	printf("%d\n",age(5));
+	return 0;
+ } 
+ 
+ int age(int n)
+ {
+ 	int c;          //c用来存放函数的返回值的变量// 
+ 	if(n==1)        //如果n=1，年龄魏10 
+ 	   c=10;
+ 	else            
+ 	   c=age(n-1)+2;
+ 	return (c);
+ }
+```
+* 递归方法求阶乘
+```
+#include<stdio.h>
+int main()
+{
+	int fac(int n);
+	int n;
+	int y;
+	printf("intput\n");
+	scanf("%d",&n);
+	y=fac(n);
+	printf("%d的阶乘=%d\n",n,y);
+	return 0;
+}
+int fac(int n)
+{
+	int f;
+	if(n<0)
+	printf("n<0数据错误");
+	else
+	if(n==0||n==1)
+	f=1;
+	else
+	f=fac(n-1)*n;
+	return (f);
+}
+```
+* 数组元素作函数实参（求数组中最大元素）
+
