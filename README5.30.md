@@ -14,19 +14,20 @@
 * 5.printf("%15d",0xABCDEF)（16进制之前要加0x）(10进制所占域宽为15，%md输出域宽为m的十进制整数)；
 * 6.本题对printf函数的原型进行了解，平常编程中可以对printf函数的返回值进行检查，以防输出错误。(我做了正确的但是就是不给我通过，多交了几遍就过了这啥啊这是)
 
-(```)
+```
 #include <stdio.h>
 int main()
 { int len = printf("Hello world!"); printf("\n");
 printf("%d", len);
 return 0; 
 }
-(```)
+```
 
 * 7.学生成绩的输入输出；
 * 8.（1）getchar()调用字符输入函数；
 
-(```)
+
+```
     （2）#include<stdio.h>
     int main()
     {
@@ -46,12 +47,13 @@ return 0;
             printf("\n");
         return 0;
     }
-(```)
+```
+
 
 * 9.（1）通过scanf函数的%m格式控制可以指定输入域宽，输入数据域宽（列数），按此宽度截取所需数据；
 *（2）str的用法
 
-(```)
+```
 #include<stdio.h>
 int main()
 {
@@ -62,13 +64,13 @@ int main()
     printf("date=%c%c\n",str[6],str[7]);
     return0;
 } 
-(```)
+```
 
 * (3） printf("year=%04d\nmonth=%02d\ndate=%02d", a/10000, a%10000/100, a%100);
 * 10.字符串及数字的反向输出
 * (1)数字反向输出；
 
-(```)
+```
 #include <stdio.h>
 int main()
 {
@@ -80,19 +82,21 @@ int main()
     int d=n%10;
     printf("%d%d%d%d\n",d,c,b,a);
 }
-(```)
+```
 
 * (2）字符串的反向输出
 * 字符数组与字符串关系
-(```)
+
+```
 char str1[]={‘h’,’e’,’l’,’l’,’o’,’ ‘,’w’,’o’,’r’,’l’,’d’};
 char str2[]=”hello world”;
-(```)
+```
+
 * 上面的语句定义了 2 个字符数组，其中 str1[]在初始化后，最后一个元素不是’\0’，而 str2[]
 * 在初始化后，最后一个字符是’\0’，因此 str1[]不能当做字符串来处理，而 str2[]是可以当做
 * 字符串来处理的，因为它最后一个字符是’\0’。
 * [原文连接]（https://blog.csdn.net/qq_39368007/article/details/82381673）
-（```）
+```
 #include<stdio.h>
 #include<string.h>
 int main()
@@ -109,12 +113,13 @@ for(i=0;i<j;i++,j--)
 printf("%s",str);
 return 0;
 }
-(```)
+```
 * 11.精度float不够，double更长，定义r为double型scanf会出现错误改为%lf;
 * 分数存在时整形换成浮点型，（4.0/3.0）；
 * 12.字母大小写的变换
 * (1)
-(```)
+
+```
 char ch;
     while((scanf("%c",&ch))!=EOF)//ch=getchar()!=EOF;
     {
@@ -124,15 +129,15 @@ char ch;
     }
 (```)
 * (2)
-(```)
+```
 int diff = 0X61 - 0X41;  
     char ch;
     while(scanf("%c\n",&ch)!=EOF){
         printf("%c\n",ch+diff);
- (```)
+ ```
 * 13.2的n次方左移实现
 * (1）
-(```)
+```
 #include<math.h>
 int main()
 {
@@ -142,14 +147,13 @@ while(scanf("%d",&num)!=EOF)
   printf("%d",(int)pow(2,num));//pow运算之后的数据类型是double型，要强制转换为int
 }
 }
-(```)
+```
 * (2）启示左移一位就可以变为2的次方
-(```)
+```
 while((scanf("%d",&a)!=EOF))
 {
 printf("%d\n",1<<a);
-}
-(```)
+}(```
 
 ## 32学习
 * 程序下载方法1：
